@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'pages/lizards/:number', to: 'pages#lizards', as: 'lizards'
+  get 'pages/lizards/:number', to: 'pages#lizards', as: 'lizards', number: /\d+/
 
-  get 'pages/home', to: 'pages#home', as: 'home'
+  get 'pages', to: 'pages#home', as: 'home'
 
-  get 'pages/about', to: 'pages#about', as: 'about'
+  get 'pages/about_us', to: 'pages#about', as: 'about'
+
+  resources :products, only: [:index, :show]
 
   root to: 'pages#home'
 
