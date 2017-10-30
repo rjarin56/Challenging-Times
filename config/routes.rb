@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get 'pages/about_us', to: 'pages#about', as: 'about'
 
-  resources :products, only: [:index, :show]
+  get 'products', to: 'products#index', as: 'index'
+
+  get 'products/show', to: 'products#show', as: 'show'
 
   root to: 'pages#home'
 
