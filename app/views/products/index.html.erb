@@ -1,0 +1,7 @@
+<h1>Products</h1>
+
+<% @products.each do |product| %>
+  <%= render partial: 'products',
+             collection: @products,
+             locals: { display_product_link: true } %>
+<% end %>

@@ -1,4 +1,9 @@
 <div class="product">
-  <h2><%= link_to product.name, product_path(product) %></h2>
-  <p><%= product.description %></p>
+  <strong>Name:</strong>
+  <% if display_product_link %>
+    <%= link_to products.name, product_path(products) %>
+  <% else %>
+    <%= products.name %>
+  <% end %>
+  <p><%= products.description %></p>
 </div>

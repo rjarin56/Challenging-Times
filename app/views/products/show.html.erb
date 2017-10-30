@@ -1,3 +1,5 @@
-<%= render partial: 'products/products', object: @product %>
+<%= render partial: 'products',
+           object: @product,
+           locals: { display_product_link: false} %>
 
-<p><%= link_to 'Back', products_path %></p>
+<p><%= link_to 'Back', index_path %></p>
