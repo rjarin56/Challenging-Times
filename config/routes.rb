@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'pages', to: 'pages#home', as: 'home'
 
-  get 'pages/about_us', to: 'pages#about', as: 'about'
+  get 'pages/about_us', to: 'pages#about_us', as: 'about'
 
   get 'products', to: 'products#index', as: 'index'
 
